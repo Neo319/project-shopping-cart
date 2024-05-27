@@ -1,0 +1,29 @@
+.navBar {
+  border: 1px solid blue;
+  position: absolute;
+
+  width: 98vw;
+  height: 4em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  top: 0;
+  left: 0;
+  padding: 0.8em;
+}
+
+.navBar * {
+  border: 1px solid black;
+}
+
+span {
+  font-size: 2em;
+  margin: 0;
+}
+
+.cart {
+  width: 70px;
+  height: 70px;
+}

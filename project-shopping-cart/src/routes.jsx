@@ -1,12 +1,13 @@
 import App from "./App";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
+import ErrorPage from "./ErrorPage";
 
 const routes = [
   {
     path: "/",
     element: <App />,
-    //error element goes here
+    errorElement: <ErrorPage />,
   },
   {
     path: "/home",
