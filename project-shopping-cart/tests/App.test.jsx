@@ -15,7 +15,7 @@ describe("something truthy and falsy", () => {
 });
 
 describe("App", () => {
-  it("renders something", async () => {
+  it("renders heading", () => {
     render(
       <MemoryRouter>
         <App />
@@ -24,5 +24,15 @@ describe("App", () => {
     expect(
       screen.getByRole("heading", { name: "Hello from Main page!" })
     ).toBeInTheDocument();
+  });
+
+  it("has a NavBar", () => {
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByRole("navigation")).toBeInTheDocument();
   });
 });

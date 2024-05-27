@@ -11,11 +11,11 @@ const NavBar = (cart) => {
   };
 
   return (
-    <div className={styles.navBar}>
+    <nav aria-label="navigation" className={styles.navBar}>
       <span>Cool Store</span>
       <img className={styles.cart} src={cartIconSrc} alt="Shopping Cart" />
       <div>Cart items: </div>
-    </div>
+    </nav>
   );
 };
 
