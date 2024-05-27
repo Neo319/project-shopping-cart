@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 
 import "./App.css";
 import { Link } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
+  const cart = useState({});
+
   return (
     <>
-      <NavBar />
+      <NavBar cart={cart} />
       <h1>Hello from Main page!</h1>
       <div>
         <Link to="home">Home</Link>

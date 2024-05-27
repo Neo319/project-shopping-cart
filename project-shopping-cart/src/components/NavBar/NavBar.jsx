@@ -1,13 +1,20 @@
 import styles from "./NavBar.module.css";
 
-const NavBar = () => {
+const NavBar = (cart) => {
   const cartIconSrc =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACUElEQVR4nO2ZPWtUQRSGn9WAEsS0foUQNRo/QCTY5A8YCaKVnaCSqBERCQh2VoKNjQgWFhqMJhJEghEri5hSrGwUAgG/BRcNgkXErBx4L1wk7JJ1ztw7kAem2b3znvMus3PPmYEVykc/8AGo1RnfgRfACaBCSfnYwMS/Y7SsZt7nkny3xPeW9CZgEPip545TQg7JjJnoa/DsaRl5ReKsAb7JzC4SZ1RGhkicQRkZJ3F2yMjXsu5ezWzZ3STOAxk5S+KckZExEqdbRj6v/E9KxPgyazSPMRPCyFAJjMyGMLI79z+JzV3FvhJCzF6GXyS4k3isUxW+CGwNJTohI1YVx+KUYj4PKXpeoveJx4xHT7RXop+IQ5eW1DzQGlK4ouKxpiDeXFWs2x7ijyQ+gC+r1MVarF6PABckfg9fDirOW6+yaJ8CWN8fo5K47BWgkuvjtznFaAN+AX+Adhx5LCO2x3twTvrPcOaiAo046b+U/jGc2V/ngO9/2SPtKrCWCFtjVQE7A2tfl+5NIjGpgHbQHYoWVdem20MkhhXwTkDNI9J8TUR6FHTOYTccJiKrdY8Sugv8DWwgMk8Cm1gEblAAl5TALRLngIy8IXFa1PTUdMuVNJMycpLEGZCRaRJnfa5cuQZ0aGtOkqPAQsBteLpIM4cDGlkANhZlZERJ2Etys8ZUg3uVsTpz7BK2ELKq1ZLJaM/1FktRrTPnBwWRvU+2LCOp+SbmuJOdd00pMRtP9dlEwDlRrrGz05X8sOWzPeAcYmBr/aGWjA37VRsl1Mwc/gIXmFSH9pqNAQAAAABJRU5ErkJggg==";
+  const filledCartIconSrc =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC4klEQVR4nO2aS2tTQRiGn2iJQbxsvRXxUo1WEClu/AMqIgreFiKo1EtFRIqC4HUjuHEjggsXWqw2UkSqFRciWLsUV24UC4L3gkFLwUWrrQy8gSGc5CTpzCQHfGAo5Dvf5T2ZfGdmTuE/jccW4DMwWWb8BF4C+4EUDcqXGBHFo7tRxXyyivwYYTdFLwAOAaO6bh8NyGaJMSI2xVx7WEJek3BmAD8kZlWVvjuBZ0C2hH1HjN053RLSUYXPbmBcfsNAa5F9V4zdC+1KeL/C6/cCf+TzXn+/WXd+jyViKMLujRYl+15B97JFXAAywFOr2FOWiEsR9myolp2tcDoZEQXSwOOiln6xhH3Y9zS7p0RHK/gmzkXYzZ1/IftoxA3JhPpmjihJLkbE2TIxZgOPyhSbCSEmayVIlZhO5yuIk7bERE2jINOs+Hdii4iaTqWIKzbtW0yuyjWajzHoQkhHAwgZciFktfU7Cc3tiLZdMyk9FE3AlYRjllr2BLDUVdBeCTGr4lAcVM7nLoMeV9C7hGPQx55ojYJ+JQwtmlIjwEyXgVPq7ZNK4pvLynXTR/AHCm6W9z6Zpl2sybXBR4ITCn4Hv2xUnne+Dj/WKoHZ9/skpzxnfCVIWfv4ZZ5yzAV+A3+BZjzyUEJMj/fBMcU3y3qvnFSiLk/xXym+WWF7ZV2ZA76p0qrYeW22vLfGvBIucRz7quJeJxB9SmgOul3RpNW1idtGIDqV8JbDmNsU8w0BaVPSDx66YScBma73KK53gePAPAJTfPA21TEBXKMOnFYBN0g46yXkLQmnSZueSb3lSjR9EnKAhNMuIQMknDnWcuUKsFitOZFsB8YctuGBeorZ6lDIGDC/XkK6VIR5SC7U6NdnPSV8esr4mJewdaGwajXFFGi29hZR5Mv4/KJOFJ4ni6ooaqQGH+8Uzrv6VZgZT/RZr0Mf76ywTlfsYabPcoc+hMDMdfOPBWbKmGHualxBtfjwD2ZcnuuTYXPNAAAAAElFTkSuQmCC";
+
+  const calculateCartItems = () => {
+    cart;
+  };
 
   return (
     <div className={styles.navBar}>
       <span>Cool Store</span>
       <img className={styles.cart} src={cartIconSrc} alt="Shopping Cart" />
+      <div>Cart items: </div>
     </div>
   );
 };
