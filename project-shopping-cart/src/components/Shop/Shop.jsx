@@ -16,21 +16,19 @@ export default function Shop({
         <h1>item {index}</h1>
         <h1>{item.title}</h1>
         <article>{item.description}</article>
-        <button onClick={() => handleCartIncrease(item.title)}>
-          Add to Cart
-        </button>
+        <button onClick={() => handleCartIncrease(item.id)}>Add to Cart</button>
 
         <div>
           {/* how to query / select for these buttons ...?  */}
           <button
             data-testid={index + "up-btn"}
-            onClick={() => handleCartIncrease(item.title)}
+            onClick={() => handleCartIncrease(item.id)}
           >
             ↑
           </button>
           <button
             data-testid={index + "down-btn"}
-            onClick={() => handleCartDecrease(item.title)}
+            onClick={() => handleCartDecrease(item.id)}
           >
             ↓
           </button>
