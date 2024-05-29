@@ -35,7 +35,7 @@ const mockProducts = [
 //setup props
 const TestWrapper = (initialCartState) => {
   const [shopItems] = useState(mockProducts);
-  const cart = useState({ initialCartState });
+  const [cart] = useState({ initialCartState });
 
   return (
     <MemoryRouter>
@@ -56,11 +56,32 @@ describe("Shop Page", () => {
         name: /Mens Casual Premium Slim Fit T-Shirts/i,
       })
     ).toBeInTheDocument();
+
+    //both product descriptions
+    expect(screen.getByText("Your perfect pack for", { exact: false }));
+    expect(screen.getByText("Slim-fitting style, contrast", { exact: false }));
   });
 
-  //displays relevant product information
+  //ensure navBar is rendered
+  it("should render a navbar", () => {
+    render(<TestWrapper initialCartState={{}} />);
+
+    expect(screen.getByRole("navigation")).toBeInTheDocument();
+  });
 
   //add to cart buttons
+  it("should have 'add to cart' buttons that updates cart state", () => {
+    render(<TestWrapper initialCartState={{}} />);
+
+    const addToCart = screen.getAllByRole("button", { name: /add to cart/i });
+
+    expect(addToCart[0]).toBeInTheDocument();
+
+    // fireEvent('click', addToCart[0]);
+
+    // expect(screen.)
+  });
+
   //qty input field
   //qty buttons
 });
