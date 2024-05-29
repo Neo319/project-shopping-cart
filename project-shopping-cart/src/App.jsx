@@ -12,9 +12,7 @@ function App() {
     <>
       <NavBar cart={cart} />
       <h1>Hello from Main page!</h1>
-      <div>
-        <Link to="home">Home</Link>
-      </div>
+
       <div>
         <Link to="shop">Shop</Link>
       </div>
