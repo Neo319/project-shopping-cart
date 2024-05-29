@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 
 import NavBar from "../NavBar/NavBar";
 
-export default function Shop({ cart, products }) {
+export default function Shop({
+  cart,
+  products,
+  handleCartIncrease,
+  handleCartDecrease,
+}) {
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
     return (
@@ -11,7 +16,25 @@ export default function Shop({ cart, products }) {
         <h1>item {index}</h1>
         <h1>{item.title}</h1>
         <article>{item.description}</article>
-        <button>Add to Cart</button>
+        <button onClick={() => handleCartIncrease(item.title)}>
+          Add to Cart
+        </button>
+
+        <div>
+          {/* how to query / select for these buttons ...?  */}
+          <button
+            data-testid={index + "up-btn"}
+            onClick={() => handleCartIncrease(item.title)}
+          >
+            ↑
+          </button>
+          <button
+            data-testid={index + "down-btn"}
+            onClick={() => handleCartDecrease(item.title)}
+          >
+            ↓
+          </button>
+        </div>
       </div>
     );
   };
@@ -19,7 +42,6 @@ export default function Shop({ cart, products }) {
     item: PropTypes.object.isRequired,
   };
 
-  console.log("products-", products);
   return (
     <>
       <NavBar cart={cart} />
@@ -41,4 +63,6 @@ export default function Shop({ cart, products }) {
 Shop.propTypes = {
   cart: PropTypes.object,
   products: PropTypes.array,
+  handleCartIncrease: PropTypes.func.isRequired,
+  handleCartDecrease: PropTypes.func.isRequired,
 };

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  const cart = useState({});
+  const [cart, setCart] = useState({});
 
   return (
     <>

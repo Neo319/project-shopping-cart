@@ -38,7 +38,9 @@ const NavBar = ({ cart }) => {
           <Link to="Checkout" data-testid="checkout-link">
             <button className="Checkout">
               <img className={styles.cart} src={cartIconSrc} alt="Checkout" />
-              <div className={styles.cartCount}>{calculateCartItems()}</div>
+              <div data-testid="cart-count" className={styles.cartCount}>
+                {calculateCartItems()}
+              </div>
             </button>
           </Link>
         </li>
