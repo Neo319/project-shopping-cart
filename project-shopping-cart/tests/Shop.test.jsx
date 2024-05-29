@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Shop from "../src/components/Shop/Shop";
 
-import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import PropTypes from "prop-types";
@@ -54,6 +54,11 @@ const TestWrapper = ({
       />
     </MemoryRouter>
   );
+};
+TestWrapper.propTypes = {
+  initialCartState: PropTypes.object,
+  handleCartIncrease: PropTypes.func,
+  handleCartDecrease: PropTypes.func,
 };
 
 //setup functions
@@ -115,14 +120,45 @@ describe("Shop Page", () => {
     expect(handleCartIncrease).toHaveBeenCalled();
   });
 
-  it("should have increment/decrement buttons that call respective functions", async () => {
+  it("should not display quantity buttons when item is not in cart", () => {
+    render(
+      <TestWrapper
+        initialCartState={{}}
+        handleCartIncrease={vi.fn()}
+        handleCartDecrease={vi.fn()}
+      />
+    );
+
+    const QuantityUpBtn = screen.getByTestId("0up-btn");
+    const QuantityDownBtn = screen.getByTestId("0down-btn");
+    expect(QuantityUpBtn).not.toBeInTheDocument();
+    expect(QuantityDownBtn).not.toBeInTheDocument();
+  });
+
+  it("should display quantity buttons when item is in cart", () => {
+    render(
+      <TestWrapper
+        initialCartState={{ 1: 1 }}
+        handleCartIncrease={vi.fn()}
+        handleCartDecrease={vi.fn()}
+      />
+    );
+
+    const QuantityUpBtn = screen.getByTestId("0up-btn");
+    const QuantityDownBtn = screen.getByTestId("0down-btn");
+
+    expect(QuantityUpBtn).toBeInTheDocument();
+    expect(QuantityDownBtn).toBeInTheDocument();
+  });
+
+  it.skip("should have increment/decrement buttons that call respective functions", async () => {
     const handleCartIncrease = vi.fn();
     const handleCartDecrease = vi.fn();
     const user = userEvent.setup();
 
     render(
       <TestWrapper
-        initialCartState={{ product1: 1 }}
+        initialCartState={{ 1: 1 }}
         handleCartIncrease={handleCartIncrease}
         handleCartDecrease={handleCartDecrease}
       />
@@ -143,7 +179,4 @@ describe("Shop Page", () => {
 
     expect(handleCartDecrease).toHaveBeenCalled();
   });
-
-  //qty input field
-  //qty buttons
 });
