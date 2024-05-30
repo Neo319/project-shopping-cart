@@ -1,5 +1,6 @@
-/* .navBar {
-  border: 1px solid blue;
+.navBar {
+  background-color: rgb(30, 40, 40);
+  color: white;
   position: absolute;
 
   width: 98vw;
@@ -8,14 +9,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-start;
   top: 0;
   left: 0;
   padding: 0.8em;
-}
-
-.navBar * {
-  border: 1px solid black;
 }
 
 span {
@@ -26,4 +23,40 @@ span {
 .cart {
   width: 70px;
   height: 70px;
-} */
+}
+
+.hero {
+  display: inline;
+  font-size: 2em;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  list-style: none;
+}
+
+.cartCount {
+  position: absolute;
+  top: 0;
+  transform: translateY(350%);
+  color: white;
+}
+
+button {
+  height: 30px;
+  width: 30px;
+}
+
+.cart {
+  width: 30px;
+  height: 30px;
+
+  transform: translateX(-50%) translateY(-50%);
+}

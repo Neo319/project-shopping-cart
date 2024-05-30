@@ -27,16 +27,16 @@ const NavBar = ({ cart }) => {
 
   return (
     <nav aria-label="navigation" className={styles.navBar}>
-      <h1>
+      <h1 className={styles.hero}>
         <Link to="/">Project Shop</Link>
       </h1>
       <ul>
         <li>
           <Link to="/Shop">Shop</Link>
         </li>
-        <li>
+        <li className={styles.checkout}>
           <Link to="Checkout" data-testid="checkout-link">
-            <button className="Checkout">
+            <button>
               <img className={styles.cart} src={cartIconSrc} alt="Checkout" />
               <div data-testid="cart-count" className={styles.cartCount}>
                 {calculateCartItems()}

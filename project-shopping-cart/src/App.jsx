@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useContext } from "react";
 
 import "./App.css";
 import { Link } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 
-function App() {
-  const [cart, setCart] = useState({});
+import Shop from "./components/Shop/Shop";
 
+function App() {
   return (
     <>
       <NavBar cart={cart} />
