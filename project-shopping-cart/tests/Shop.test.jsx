@@ -42,7 +42,7 @@ const TestWrapper = ({
   handleCartDecrease,
 }) => {
   const [shopItems] = useState(mockProducts);
-  const [cart] = useState({ initialCartState });
+  const [cart] = useState(initialCartState);
 
   return (
     <MemoryRouter>
@@ -129,8 +129,8 @@ describe("Shop Page", () => {
       />
     );
 
-    const QuantityUpBtn = screen.getByTestId("0up-btn");
-    const QuantityDownBtn = screen.getByTestId("0down-btn");
+    const QuantityUpBtn = screen.queryByTestId("0up-btn");
+    const QuantityDownBtn = screen.queryByTestId("0down-btn");
     expect(QuantityUpBtn).not.toBeInTheDocument();
     expect(QuantityDownBtn).not.toBeInTheDocument();
   });
@@ -151,7 +151,7 @@ describe("Shop Page", () => {
     expect(QuantityDownBtn).toBeInTheDocument();
   });
 
-  it.skip("should have increment/decrement buttons that call respective functions", async () => {
+  it("should have increment/decrement buttons that call respective functions", async () => {
     const handleCartIncrease = vi.fn();
     const handleCartDecrease = vi.fn();
     const user = userEvent.setup();

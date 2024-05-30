@@ -18,21 +18,31 @@ export default function Shop({
         <article>{item.description}</article>
         <button onClick={() => handleCartIncrease(item.id)}>Add to Cart</button>
 
-        <div>
-          {/* how to query / select for these buttons ...?  */}
-          <button
-            data-testid={index + "up-btn"}
-            onClick={() => handleCartIncrease(item.id)}
-          >
-            ↑
-          </button>
-          <button
-            data-testid={index + "down-btn"}
-            onClick={() => handleCartDecrease(item.id)}
-          >
-            ↓
-          </button>
-        </div>
+        <span>
+          item.id: {item.id}; cart state: {JSON.stringify(cart)}
+        </span>
+
+        {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
+          <div>
+            <div>
+              {/* how to query / select for these buttons ...?  */}
+              <button
+                data-testid={index + "up-btn"}
+                onClick={() => handleCartIncrease(item.id)}
+              >
+                ↑
+              </button>
+              <button
+                data-testid={index + "down-btn"}
+                onClick={() => handleCartDecrease(item.id)}
+              >
+                ↓
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>object {item.id} not in cart</>
+        )}
       </div>
     );
   };
