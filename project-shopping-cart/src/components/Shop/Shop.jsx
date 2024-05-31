@@ -53,11 +53,15 @@ export default function Shop() {
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
     return (
-      <div className="Card">
-        <h1>item {index}</h1>
-        <h1>{item.title}</h1>
+      <div className={styles.card}>
+        <h1 className={styles.cardTitle}>{item.title}</h1>
         <article>{item.description}</article>
-        <button onClick={() => handleCartIncrease(item.id)}>Add to Cart</button>
+        <button
+          className={styles.addToCart}
+          onClick={() => handleCartIncrease(item.id)}
+        >
+          Add to Cart
+        </button>
 
         {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
           <div>

@@ -1,3 +1,17 @@
 .title {
   margin-top: 60vh;
 }
+
+.card {
+  border: 2px solid red;
+  padding-bottom: 50px;
+}
+
+.cardTitle {
+  font-size: 1.5em;
+}
+
+.addToCart {
+  width: 200px;
+  height: 40px;
+}
