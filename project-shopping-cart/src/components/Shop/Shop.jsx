@@ -25,7 +25,6 @@ export default function Shop({
         {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
           <div>
             <div>
-              {/* how to query / select for these buttons ...?  */}
               <button
                 data-testid={index + "up-btn"}
                 onClick={() => handleCartIncrease(item.id)}
@@ -74,3 +73,4 @@ Shop.propTypes = {
   handleCartIncrease: PropTypes.func.isRequired,
   handleCartDecrease: PropTypes.func.isRequired,
 };
+//
