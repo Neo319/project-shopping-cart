@@ -40,12 +40,24 @@ function App() {
   //-------------------------------------------------
   // TODO : make this actually function
   const handleCartIncrease = (itemId) => {
-    const newCart = { ...cart, [itemId]: "1" };
-    setCart(newCart);
+    if (cart[itemId] >= 1) {
+      const newCart = { ...cart, [itemId]: cart[itemId] + 1 };
+      setCart(newCart);
+    } else {
+      const newCart = { ...cart, [itemId]: 1 };
+      setCart(newCart);
+    }
   };
 
   const handleCartDecrease = (itemId) => {
-    console.log("decreasing !!! ");
+    if (cart[itemId] > 1) {
+      const newCart = { ...cart, [itemId]: cart[itemId] - 1 };
+      setCart(newCart);
+    } else {
+      const newCart = { ...cart };
+      delete newCart[itemId];
+      setCart(newCart);
+    }
   };
 
   return (

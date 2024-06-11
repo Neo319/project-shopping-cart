@@ -19,8 +19,6 @@ const NavBar = ({ cart }) => {
     let sum = 0;
     const descriptors = Object.getOwnPropertyDescriptors(cart);
 
-    console.log(descriptors);
-
     for (const key in descriptors) {
       const descriptor = descriptors[key];
       if (typeof descriptor.value === "number") {

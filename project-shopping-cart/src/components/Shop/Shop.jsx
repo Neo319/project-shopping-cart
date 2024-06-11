@@ -12,6 +12,7 @@ export default function Shop({
   const Card = ({ item, index }) => {
     const shortenedTitle = item.title.slice(0, 20) + " ... ";
     const shortenedDesc = item.description.slice(0, 100) + " ... ";
+    const cartQuantity = cart[item.id];
 
     return (
       <div className={styles.card}>
@@ -35,7 +36,7 @@ export default function Shop({
                 >
                   ↓
                 </button>
-                <p>Added to Cart!</p>
+                <p>{cartQuantity} added to Cart!</p>
               </div>
             </div>
           ) : (
