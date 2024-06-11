@@ -37,7 +37,8 @@ function App() {
     },
   ];
 
-  //temporary implementation caps at 1
+  //-------------------------------------------------
+  // TODO : make this actually function
   const handleCartIncrease = (itemId) => {
     const newCart = { ...cart, [itemId]: "1" };
     setCart(newCart);
