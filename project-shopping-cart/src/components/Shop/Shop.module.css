@@ -36,6 +36,11 @@
   align-items: center;
 }
 
+.price {
+  font-size: 2em;
+  font-weight: 500;
+}
+
 .card h1 {
   font-weight: 300;
 }

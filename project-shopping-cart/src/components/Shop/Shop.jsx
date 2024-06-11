@@ -16,7 +16,10 @@ export default function Shop({
 
     return (
       <div className={styles.card}>
-        <img className={styles.cardImg} src={item.image} alt={item.title} />
+        <div>
+          <img className={styles.cardImg} src={item.image} alt={item.title} />
+          <span className={styles.price}>${item.price}</span>
+        </div>
         <div>
           <h1>{shortenedTitle}</h1>
           <article>{shortenedDesc}</article>

@@ -37,8 +37,6 @@ function App() {
     },
   ];
 
-  //-------------------------------------------------
-  // TODO : make this actually function
   const handleCartIncrease = (itemId) => {
     if (cart[itemId] >= 1) {
       const newCart = { ...cart, [itemId]: cart[itemId] + 1 };
