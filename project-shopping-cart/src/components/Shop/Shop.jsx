@@ -51,7 +51,6 @@ export default function Shop({
 
   return (
     <>
-      <NavBar cart={cart} />
       <h1>Hello from Shop page!</h1>
       <div>
         <Link to="/">Back to Main</Link>
