@@ -1,8 +1,16 @@
 .navBar {
   border: 1px solid teal;
+  width: 100%;
+  margin: 0;
+
+  top: 0;
+  left: 0;
+  position: sticky;
 
   display: flex;
   justify-content: space-around;
+
+  background-color: #d9d9d9;
 }
 
 ul {
