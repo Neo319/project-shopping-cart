@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useState } from "react";
-
 import styles from "./Shop.module.css";
-import NavBar from "../NavBar/NavBar";
 
 export default function Shop() {
   const [cart, setCart] = useState({});
@@ -52,38 +49,47 @@ export default function Shop() {
 
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
+    const shortenedTitle = item.title.slice(0, 20) + " ... ";
+    const shortenedDesc = item.description.slice(0, 100) + " ... ";
+    const cartQuantity = cart[item.id];
+
     return (
       <div className={styles.card}>
-        <h1 className={styles.cardTitle}>{item.title}</h1>
-        <article>{item.description}</article>
-        <button
-          className={styles.addToCart}
-          onClick={() => handleCartIncrease(item.id)}
-        >
-          Add to Cart
-        </button>
+        <div>
+          <img className={styles.cardImg} src={item.image} alt={item.title} />
+          <span className={styles.price}>${item.price}</span>
+        </div>
+        <div>
+          <h1>{shortenedTitle}</h1>
+          <article>{shortenedDesc}</article>
 
-        {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
-          <div>
+          {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
             <div>
-              {/* how to query / select for these buttons ...?  */}
-              <button
-                data-testid={index + "up-btn"}
-                onClick={() => handleCartIncrease(item.id)}
-              >
-                ↑
-              </button>
-              <button
-                data-testid={index + "down-btn"}
-                onClick={() => handleCartDecrease(item.id)}
-              >
-                ↓
-              </button>
+              <div>
+                <button
+                  data-testid={index + "up-btn"}
+                  onClick={() => handleCartIncrease(item.id)}
+                >
+                  ↑
+                </button>
+                <button
+                  data-testid={index + "down-btn"}
+                  onClick={() => handleCartDecrease(item.id)}
+                >
+                  ↓
+                </button>
+                <p>{cartQuantity} added to Cart!</p>
+              </div>
             </div>
-          </div>
-        ) : (
-          <></>
-        )}
+          ) : (
+            <div>
+              <button onClick={() => handleCartIncrease(item.id)}>
+                Add to Cart
+              </button>
+              <p> -- Item not in cart --</p>
+            </div>
+          )}
+        </div>
       </div>
     );
   };
@@ -92,19 +98,26 @@ export default function Shop() {
   };
 
   return (
-    <>
-      <NavBar cart={cart} />
-      <h1 className={styles.title}>Hello from Shop page!</h1>
+    <div className={styles.shop}>
+      <h1>Hello from Shop page!</h1>
       <div>
         <Link to="/">Back to Main</Link>
       </div>
 
-      <h1>Shop here</h1>
-      <div className="shopContainer">
+      <h1> ↓Shop here↓ </h1>
+      <div className={styles.shopContainer}>
         {products.map((item, index) => {
           return <Card key={index} item={item} index={index} />;
         })}
       </div>
-    </>
+    </div>
   );
 }
+
+Shop.propTypes = {
+  cart: PropTypes.object,
+  products: PropTypes.array,
+  handleCartIncrease: PropTypes.func.isRequired,
+  handleCartDecrease: PropTypes.func.isRequired,
+};
+//

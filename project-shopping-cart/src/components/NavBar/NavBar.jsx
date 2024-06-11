@@ -27,16 +27,16 @@ const NavBar = ({ cart }) => {
 
   return (
     <nav aria-label="navigation" className={styles.navBar}>
-      <h1 className={styles.hero}>
-        <Link to="/">Project Shop</Link>
+      <h1>
+        <Link to="/">Project TOP Shop</Link>
       </h1>
       <ul>
         <li>
           <Link to="/Shop">Shop</Link>
         </li>
-        <li className={styles.checkout}>
-          <Link to="Checkout" data-testid="checkout-link">
-            <button>
+        <li>
+          <Link to="/checkout" data-testid="checkout-link">
+            <button className={styles.checkoutBtn}>
               <img className={styles.cart} src={cartIconSrc} alt="Checkout" />
               <div data-testid="cart-count" className={styles.cartCount}>
                 {calculateCartItems()}
@@ -50,7 +50,7 @@ const NavBar = ({ cart }) => {
 };
 
 NavBar.propTypes = {
-  cart: PropTypes.object, // cart prop is expected to be an object
+  cart: PropTypes.object,
 };
 
 export default NavBar;

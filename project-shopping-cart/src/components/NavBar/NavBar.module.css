@@ -1,62 +1,36 @@
 .navBar {
-  background-color: rgb(30, 40, 40);
-  color: white;
-  position: absolute;
+  border: 1px solid teal;
+  width: 100%;
+  margin: 0;
 
-  width: 98vw;
-  height: 4em;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
   top: 0;
   left: 0;
-  padding: 0.8em;
-}
-
-span {
-  font-size: 2em;
-  margin: 0;
-}
-
-.cart {
-  width: 70px;
-  height: 70px;
-}
-
-.hero {
-  display: inline;
-  font-size: 2em;
-}
-
-ul {
-  display: flex;
-  flex-direction: row;
-  width: 50vw;
+  position: absolute;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 
+  background-color: #d9d9d9;
+}
+
+.navBar ul {
   list-style: none;
+
+  display: flex;
+  align-items: center;
 }
 
-.cartCount {
-  position: absolute;
-  top: 0;
-  transform: translateY(350%);
-  color: white;
-}
-
-button {
-  height: 30px;
-  width: 30px;
+.navBar li {
+  width: 100px;
 }
 
 .cart {
   width: 30px;
-  height: 30px;
+  height: auto;
+  border: none;
+  padding: none;
+}
 
-  transform: translateX(-50%) translateY(-50%);
+.checkoutBtn {
+  padding: 1em;
 }

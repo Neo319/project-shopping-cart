@@ -1,17 +1,69 @@
-.title {
-  margin-top: 60vh;
+.shop {
+  margin-top: 220px;
+  margin-bottom: 220px;
+}
+
+.cardImg {
+  max-width: 30vw;
+  max-height: 10em;
+
+  width: auto;
+  height: auto;
+
+  margin: 0.5em;
+  padding: 2em;
+  border-radius: 10%;
+  background-color: white;
+}
+
+.shopContainer {
+  border-radius: 10px;
+
+  padding: 2em;
+
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+  grid-auto-rows: auto;
 }
 
 .card {
-  border: 2px solid red;
-  padding-bottom: 50px;
+  background-color: rgb(240, 240, 240);
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 20%;
+  padding: 1em;
+
+  display: flex;
+  align-items: center;
 }
 
-.cardTitle {
-  font-size: 1.5em;
+.price {
+  font-size: 2em;
+  font-weight: 500;
 }
 
-.addToCart {
-  width: 200px;
-  height: 40px;
+.card h1 {
+  font-weight: 300;
+}
+
+.card:hover {
+  border: 2px solid #535bf2;
+  transition: 0.2s linear;
+}
+
+.card article {
+  background-color: white;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* declarations for mobile */
+@media screen and (max-width: 1000px) {
+  .shopContainer {
+    grid-template-columns: 80%;
+
+    /* keeping it centered */
+    transform: translateX(10%);
+  }
 }
