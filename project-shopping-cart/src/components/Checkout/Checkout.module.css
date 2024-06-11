@@ -1,0 +1,24 @@
+.checkoutPage {
+  margin-top: 220px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutPage img {
+  max-width: 30vw;
+  max-height: 10em;
+
+  width: auto;
+  height: auto;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid gray;
+  padding: 2em;
+  margin: 1em;
+}

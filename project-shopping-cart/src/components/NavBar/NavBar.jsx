@@ -35,7 +35,7 @@ const NavBar = ({ cart }) => {
           <Link to="/Shop">Shop</Link>
         </li>
         <li>
-          <Link to="Checkout" data-testid="checkout-link">
+          <Link to="/checkout" data-testid="checkout-link">
             <button className={styles.checkoutBtn}>
               <img className={styles.cart} src={cartIconSrc} alt="Checkout" />
               <div data-testid="cart-count" className={styles.cartCount}>

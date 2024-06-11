@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,6 +11,10 @@ import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   const [cart, setCart] = useState({});
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   //mock data from fakeStoreAPI
   const mockProducts = [
@@ -74,7 +78,10 @@ function App() {
             />
           }
         ></Route>
-        <Route path={"/checkout"} element={<Checkout cart={cart} />} />
+        <Route
+          path={"/checkout"}
+          element={<Checkout cart={cart} products={mockProducts} />}
+        />
       </Routes>
     </Router>
   );
