@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
-import NavBar from "../NavBar/NavBar";
+import styles from "./Shop.module.css";
 
 export default function Shop({
   cart,
@@ -12,8 +11,7 @@ export default function Shop({
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
     return (
-      <div className="Card">
-        <h1>item {index}</h1>
+      <div className={styles.card}>
         <h1>{item.title}</h1>
         <article>{item.description}</article>
         <button onClick={() => handleCartIncrease(item.id)}>Add to Cart</button>
@@ -57,7 +55,7 @@ export default function Shop({
       </div>
 
       <h1>Shop here</h1>
-      <div className="shopContainer">
+      <div className={styles.shopContainer}>
         {products.map((item, index) => {
           return <Card key={index} item={item} index={index} />;
         })}
