@@ -1,5 +1,6 @@
 .checkoutPage {
   margin-top: 220px;
+  margin-bottom: 220px;
 
   display: flex;
   flex-direction: column;
