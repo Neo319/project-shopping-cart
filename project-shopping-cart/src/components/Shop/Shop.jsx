@@ -10,36 +10,42 @@ export default function Shop({
 }) {
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
+    const shortenedTitle = item.title.slice(0, 20) + " ... ";
+
     return (
       <div className={styles.card}>
-        <h1>{item.title}</h1>
-        <article>{item.description}</article>
-        <button onClick={() => handleCartIncrease(item.id)}>Add to Cart</button>
+        <img src={item.image} alt={item.title} />
+        <div>
+          <h1>{shortenedTitle}</h1>
+          <article>{item.description}</article>
 
-        <span>
-          item.id: {item.id}; cart state: {JSON.stringify(cart)}
-        </span>
-
-        {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
-          <div>
+          {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
             <div>
-              <button
-                data-testid={index + "up-btn"}
-                onClick={() => handleCartIncrease(item.id)}
-              >
-                ↑
-              </button>
-              <button
-                data-testid={index + "down-btn"}
-                onClick={() => handleCartDecrease(item.id)}
-              >
-                ↓
-              </button>
+              <div>
+                <button
+                  data-testid={index + "up-btn"}
+                  onClick={() => handleCartIncrease(item.id)}
+                >
+                  ↑
+                </button>
+                <button
+                  data-testid={index + "down-btn"}
+                  onClick={() => handleCartDecrease(item.id)}
+                >
+                  ↓
+                </button>
+                <p>Added to Cart!</p>
+              </div>
             </div>
-          </div>
-        ) : (
-          <>object {item.id} not in cart</>
-        )}
+          ) : (
+            <div>
+              <button onClick={() => handleCartIncrease(item.id)}>
+                Add to Cart
+              </button>
+              <p> -- Item not in cart --</p>
+            </div>
+          )}
+        </div>
       </div>
     );
   };
@@ -54,7 +60,7 @@ export default function Shop({
         <Link to="/">Back to Main</Link>
       </div>
 
-      <h1>Shop here</h1>
+      <h1> ↓Shop here↓ </h1>
       <div className={styles.shopContainer}>
         {products.map((item, index) => {
           return <Card key={index} item={item} index={index} />;
