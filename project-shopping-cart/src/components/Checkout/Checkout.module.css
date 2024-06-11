@@ -11,6 +11,10 @@
 
   width: auto;
   height: auto;
+  margin: 1em;
+  border-radius: 10%;
+  padding: 1em;
+  background-color: white;
 }
 
 .cartItem {
@@ -28,4 +32,24 @@
   border-radius: 10%;
   background-color: rgb(240, 240, 240);
   padding: 1em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info button {
+  background-color: rgb(240, 240, 240);
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.5em;
 }

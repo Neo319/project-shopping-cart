@@ -5,12 +5,16 @@ export default function Checkout({ cart, products, deleteCartItem }) {
   function CartList({ item }) {
     const title = products[item - 1].title;
     const imgSrc = products[item - 1].image;
+    const price = products[item - 1].price;
     return (
       <li className={styles.cartItem}>
         <div className={styles.info}>
           <h2>{title}</h2>
-          <span>Quantity: {cart[item]}</span>
-          <button onClick={(e) => deleteCartItem(item)}>Remove Item</button>
+          <div>
+            <span>Quantity: {cart[item]}</span>
+            <span className={styles.price}>${price}</span>
+          </div>
+          <button onClick={() => deleteCartItem(item)}>Remove Item</button>
         </div>
         <img src={imgSrc} alt="" />
       </li>
@@ -42,4 +46,5 @@ export default function Checkout({ cart, products, deleteCartItem }) {
 Checkout.propTypes = {
   cart: PropTypes.object.isRequired,
   products: PropTypes.array.isRequired,
+  deleteCartItem: PropTypes.func.isRequired,
 };
