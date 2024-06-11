@@ -17,6 +17,8 @@ function App() {
   }, [cart]);
 
   //mock data from fakeStoreAPI
+  //----------------------------------------
+  //TODO: replace with real API fetch
   const mockProducts = [
     {
       id: 1,

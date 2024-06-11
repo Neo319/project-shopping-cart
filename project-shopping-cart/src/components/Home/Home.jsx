@@ -27,9 +27,14 @@ export default function Home() {
         <a href="https://www.theodinproject.com">
           The Odin Project's React Course.
         </a>
+        Try using the nav bar at the top of your screen to navigate to The Shop
+        page, fill your cart with some items, and then navigate to checkout by
+        clicking on the cart!
       </p>
       <p>
-        Icons by <a href="https://www.icons8.com">Icons8</a>
+        Icons by <a href="https://www.icons8.com">Icons8</a> <br />
+        Shop items retrieved from{" "}
+        <a href="https://fakestoreapi.com">FakeStoreAPI</a>
       </p>
     </div>
   );

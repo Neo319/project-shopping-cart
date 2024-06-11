@@ -28,7 +28,7 @@ const NavBar = ({ cart }) => {
   return (
     <nav aria-label="navigation" className={styles.navBar}>
       <h1>
-        <Link to="/">Project Shop</Link>
+        <Link to="/">Project TOP Shop</Link>
       </h1>
       <ul>
         <li>
@@ -50,7 +50,7 @@ const NavBar = ({ cart }) => {
 };
 
 NavBar.propTypes = {
-  cart: PropTypes.object, // cart prop is expected to be an object
+  cart: PropTypes.object,
 };
 
 export default NavBar;
