@@ -11,13 +11,14 @@ export default function Shop({
   // eslint-disable-next-line react/prop-types
   const Card = ({ item, index }) => {
     const shortenedTitle = item.title.slice(0, 20) + " ... ";
+    const shortenedDesc = item.description.slice(0, 100) + " ... ";
 
     return (
       <div className={styles.card}>
-        <img src={item.image} alt={item.title} />
+        <img className={styles.cardImg} src={item.image} alt={item.title} />
         <div>
           <h1>{shortenedTitle}</h1>
-          <article>{item.description}</article>
+          <article>{shortenedDesc}</article>
 
           {Object.prototype.hasOwnProperty.call(cart, item.id) ? (
             <div>
@@ -54,7 +55,7 @@ export default function Shop({
   };
 
   return (
-    <>
+    <div className={styles.shop}>
       <h1>Hello from Shop page!</h1>
       <div>
         <Link to="/">Back to Main</Link>
@@ -66,7 +67,7 @@ export default function Shop({
           return <Card key={index} item={item} index={index} />;
         })}
       </div>
-    </>
+    </div>
   );
 }
 

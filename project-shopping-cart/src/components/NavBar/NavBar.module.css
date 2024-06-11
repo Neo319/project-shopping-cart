@@ -23,3 +23,14 @@ ul {
 li {
   width: 100px;
 }
+
+.cart {
+  width: 30px;
+  height: auto;
+  border: none;
+  padding: none;
+}
+
+.checkoutBtn {
+  padding: 1em;
+}

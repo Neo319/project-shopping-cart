@@ -1,18 +1,25 @@
-body {
-  margin-top: 120px;
+.shop {
+  margin-top: 220px;
 }
 
-* {
+.shop * {
   color: pink;
 }
 
-img {
-  max-width: 100%;
-  max-height: 400px;
+.cardImg {
+  max-width: 30vw;
+  max-height: 10em;
+
+  width: auto;
+  height: auto;
+
+  margin: 0.5em;
+  padding: 2em;
+  border-radius: 10%;
+  background-color: white;
 }
 
 .shopContainer {
-  border: 1px solid black;
   border-radius: 10px;
 
   padding: 2em;
@@ -24,13 +31,31 @@ img {
 }
 
 .card {
-  border: 1px solid gray;
-  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 20%;
+  padding: 1em;
 
   display: flex;
+  align-items: center;
 }
 
 .card h1 {
-  border: 1px solid red;
   font-weight: 300;
+}
+
+.card article {
+  background-color: white;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* declarations for mobile */
+@media screen and (max-width: 1000px) {
+  .shopContainer {
+    grid-template-columns: 80%;
+
+    /* keeping it centered */
+    transform: translateX(10%);
+  }
 }
