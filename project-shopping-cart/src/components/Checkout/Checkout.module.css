@@ -18,7 +18,14 @@
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid gray;
+  border-radius: 5%;
+  background-color: rgb(249, 249, 249);
   padding: 2em;
   margin: 1em;
+}
+
+.checkoutPage ul {
+  border-radius: 10%;
+  background-color: rgb(240, 240, 240);
+  padding: 1em;
 }

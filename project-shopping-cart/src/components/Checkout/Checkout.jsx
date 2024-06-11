@@ -1,13 +1,17 @@
 import PropTypes from "prop-types";
 import styles from "./Checkout.module.css";
 
-export default function Checkout({ cart, products }) {
+export default function Checkout({ cart, products, deleteCartItem }) {
   function CartList({ item }) {
     const title = products[item - 1].title;
     const imgSrc = products[item - 1].image;
     return (
       <li className={styles.cartItem}>
-        <h2>{title}</h2>
+        <div className={styles.info}>
+          <h2>{title}</h2>
+          <span>Quantity: {cart[item]}</span>
+          <button onClick={(e) => deleteCartItem(item)}>Remove Item</button>
+        </div>
         <img src={imgSrc} alt="" />
       </li>
     );

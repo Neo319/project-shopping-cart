@@ -56,10 +56,14 @@ function App() {
       const newCart = { ...cart, [itemId]: cart[itemId] - 1 };
       setCart(newCart);
     } else {
-      const newCart = { ...cart };
-      delete newCart[itemId];
-      setCart(newCart);
+      deleteCartItem(itemId);
     }
+  };
+
+  const deleteCartItem = (itemId) => {
+    const newCart = { ...cart };
+    delete newCart[itemId];
+    setCart(newCart);
   };
 
   return (
@@ -80,7 +84,13 @@ function App() {
         ></Route>
         <Route
           path={"/checkout"}
-          element={<Checkout cart={cart} products={mockProducts} />}
+          element={
+            <Checkout
+              cart={cart}
+              products={mockProducts}
+              deleteCartItem={deleteCartItem}
+            />
+          }
         />
       </Routes>
     </Router>
