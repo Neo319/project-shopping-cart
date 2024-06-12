@@ -6,8 +6,10 @@ export default function Home() {
     <div className={styles.home}>
       <div className={styles.images}>
         <img
-          width="40"
-          height="40"
+          className={styles.img1}
+          width="60"
+          height="60"
+          opacity="0.3"
           src="https://img.icons8.com/ios-glyphs/30/shop.png"
           alt="Shop Logo"
         />
