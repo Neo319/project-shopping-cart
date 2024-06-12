@@ -4,7 +4,7 @@
 }
 
 .cardImg {
-  max-width: 30vw;
+  max-width: 40%;
   max-height: 10em;
 
   width: auto;
@@ -23,7 +23,7 @@
 
   display: grid;
   grid-template-columns: 45% 45%;
-  gap: 10%;
+  gap: 10px 10%;
   grid-auto-rows: auto;
 }
 
