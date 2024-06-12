@@ -26,9 +26,25 @@ export default function Checkout({ cart, products, deleteCartItem }) {
     item: PropTypes.string.isRequired,
   };
 
+  const subtotalPrice = () => {
+    if (Object.keys(cart).length) {
+      const cartItems = Object.entries(cart);
+      let total = 0;
+
+      cartItems.map((item) => {
+        const itemId = item[0] - 1;
+
+        const itemPrice = products[itemId].price;
+        const itemQuant = item[1];
+        total = total + itemPrice * itemQuant;
+      });
+      return total;
+    } else return null;
+  };
+  console.log("func result: " + subtotalPrice());
+
   //-----------------------------------------
   //TODO: add a checkout subtotal that adds up all prices and a mock confirm button!
-  //add a 'cart empty' screen
   return (
     <div className={styles.checkoutPage}>
       <h1>Hello from Checkout page!!</h1>
@@ -36,15 +52,25 @@ export default function Checkout({ cart, products, deleteCartItem }) {
 
       {/* if there are any items in cart */}
       {Object.keys(cart).length ? (
-        <ul>
-          {Object.keys(cart).map((key) => {
-            return (
-              <div key={key}>
-                <CartList item={key} />
-              </div>
-            );
-          })}
-        </ul>
+        <div>
+          <ul>
+            {Object.keys(cart).map((key) => {
+              return (
+                <div key={key}>
+                  <CartList item={key} />
+                </div>
+              );
+            })}
+          </ul>
+          <div className={styles.subtotal}>
+            <span>
+              ........ Subtotal <br />
+            </span>
+            <span className={styles.subtotalNumber}>
+              <b>{subtotalPrice()}</b>
+            </span>
+          </div>
+        </div>
       ) : (
         <div className={styles.emptyCart}>
           <img
