@@ -54,3 +54,16 @@
   font-weight: 500;
   font-size: 1.5em;
 }
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10%;
+}
+
+.emptyCart img {
+  width: 64px;
+  height: 64px;
+}
