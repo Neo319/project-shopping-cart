@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -39,6 +39,16 @@ function App() {
     },
   ];
 
+  //fetching API data
+
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setProducts(json));
+  }, []);
+
   const handleCartIncrease = (itemId) => {
     if (cart[itemId] >= 1) {
       const newCart = { ...cart, [itemId]: cart[itemId] + 1 };
@@ -74,7 +84,7 @@ function App() {
           element={
             <Shop
               cart={cart}
-              products={mockProducts}
+              products={products}
               handleCartIncrease={handleCartIncrease}
               handleCartDecrease={handleCartDecrease}
             />
@@ -85,7 +95,7 @@ function App() {
           element={
             <Checkout
               cart={cart}
-              products={mockProducts}
+              products={products}
               deleteCartItem={deleteCartItem}
             />
           }

@@ -43,8 +43,6 @@ export default function Checkout({ cart, products, deleteCartItem }) {
   };
   console.log("func result: " + subtotalPrice());
 
-  //-----------------------------------------
-  //TODO: add a checkout subtotal that adds up all prices and a mock confirm button!
   return (
     <div className={styles.checkoutPage}>
       <h1>Hello from Checkout page!!</h1>
