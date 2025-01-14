@@ -10,7 +10,7 @@
 
 ## Description
 
-This is a personal portfolio project built as a monorepo. It is a solution to the ["Where's Waldo?" project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) from [The Odin Project](https://www.theodinproject.com) curriculum. This project aims to create a user-friendly eCommerce storefront, with a stateful shopping cart that tracks a user's items.
+This is a personal portfolio project built as a monorepo. It is a solution to the ["Shopping Cart" project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) from [The Odin Project](https://www.theodinproject.com) curriculum. This project aims to create a user-friendly eCommerce storefront, with a stateful shopping cart that tracks a user's items.
 
 It is primarily intended to practice using React, and specifically its useState and useEffect Hooks, to manage stateful interactions in a front-end application. This project also makes use of API calls to [fakestoreAPI](https://fakestoreapi.com) for its store inventory.
 
