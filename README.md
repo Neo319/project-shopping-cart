@@ -1,13 +1,51 @@
-## Project Shopping-Cart
+# Personal Portfolio Project- Shopping Cart
 
-This file contains the vite+react project, 'shopping cart' This project is primarily intended to practice the use of React's state hook, specifically to manage the state of a user's shopping cart.
+## Table of Contents
 
-This project also contains API calls to [fakestoreAPI](https://fakestoreapi.com).
+- [Description](#description)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Technologies used](#technologies-used)
+- [Contributing and Contact](#contributing-and-contact)
 
-## Important Links
+## Description
 
-- The live preview of this project is [deployed on Netlify](https://6669ee2c4ac3e6186cb72e8b--lighthearted-licorice-112eb9.netlify.app).
+This is a personal portfolio project built as a monorepo. It is a solution to the ["Where's Waldo?" project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) from [The Odin Project](https://www.theodinproject.com) curriculum. This project aims to create a user-friendly eCommerce storefront, with a stateful shopping cart that tracks a user's items.
 
-- This project is part of [The Odin Project](https://www.theodinproject.com/) curriculum.
+It is primarily intended to practice using React, and specifically its useState and useEffect Hooks, to manage stateful interactions in a front-end application. This project also makes use of API calls to [fakestoreAPI](https://fakestoreapi.com) for its store inventory.
 
-- See also the [relevant lesson](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart) for this project.
+## Deployment
+
+This project is deployed on Netlify.
+
+[See Live Preview here.](https://lighthearted-licorice-112eb9.netlify.app)
+
+## Usage
+
+This eCommerce storefront features a user-friendly interface, an integrated state to manage a user's cart, and calls to fakeStoreAPI to display a store inventory.
+
+Users can navigate to the app's Shop page, select various items of specified quantities and add them to their cart. From there, they can navigate to the cart page, and see the total price of their selected items.
+
+Core purpose:
+
+- State management of a user's cart.
+- manage making API calls to a remote backend.
+- User-friendly interface elements and react client-side routing.
+
+## Technologies used
+
+- React.js
+- react-router, react-dom
+- useState, useEffect,
+- Fetch API calls
+- Vite
+- Javascript, HTML
+
+## Contributing and contact
+
+Contributions are welcome -- feel free to start a pull request for any concerns or questions.
+
+Also contact me at:
+
+- email: alexmnevins@gmail.com
+- LinkedIn:[Alex Nevins](https://www.linkedin.com/in/alex-nevins-489488282/)
