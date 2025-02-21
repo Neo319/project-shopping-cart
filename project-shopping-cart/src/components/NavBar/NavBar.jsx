@@ -1,4 +1,3 @@
-import styles from "./NavBar.module.css";
 import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
@@ -26,7 +25,7 @@ const NavBar = ({ cart }) => {
   };
 
   return (
-    <nav aria-label="navigation" className={styles.navBar}>
+    <nav aria-label="navigation" className="navBar">
       <h1>
         <Link to="/">Project TOP Shop</Link>
       </h1>
@@ -36,9 +35,9 @@ const NavBar = ({ cart }) => {
         </li>
         <li>
           <Link to="/checkout" data-testid="checkout-link">
-            <button className={styles.checkoutBtn}>
-              <img className={styles.cart} src={cartIconSrc} alt="Checkout" />
-              <div data-testid="cart-count" className={styles.cartCount}>
+            <button className="checkoutBtn">
+              <img className="cart" src={cartIconSrc} alt="Checkout" />
+              <div data-testid="cart-count" className="cartCount">
                 {calculateCartItems()}
               </div>
             </button>

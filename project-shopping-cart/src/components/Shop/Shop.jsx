@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./Shop.module.css";
 
 export default function Shop({
   cart,
@@ -19,10 +18,15 @@ export default function Shop({
     };
 
     return (
-      <div className={styles.card}>
+      <div className="card">
         <div>
-          <img className={styles.cardImg} src={item.image} alt={item.title} />
-          <span className={styles.price}>${item.price}</span>
+          <img
+            className="cardImg"
+            src={item.image}
+            alt={item.title}
+            height="200px"
+          />
+          <span className="price">${item.price}</span>
         </div>
         <div>
           <h1>{shortenedTitle}</h1>
@@ -63,14 +67,14 @@ export default function Shop({
   };
 
   return (
-    <div className={styles.shop}>
+    <div className="shop">
       <h1>Hello from Shop page!</h1>
       <div>
         <Link to="/">Back to Main</Link>
       </div>
 
       <h1> ↓Shop here↓ </h1>
-      <div className={styles.shopContainer}>
+      <div className="shopContainer">
         {products.map((item, index) => {
           return <Card key={index} item={item} index={index} />;
         })}

@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.home}>
-      <div className={styles.images}>
+    <div className="home">
+      <div className="images">
         <img
-          className={styles.img1}
+          className="img1"
           width="60"
           height="60"
           opacity="0.3"

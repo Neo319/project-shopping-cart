@@ -28,6 +28,8 @@
 - UI is overly simplistic
 - client side routes should not say hello as in debug
 
+- possible refactors: move router to main.jsx; refactor css
+
 ## Shop page
 
 - products could be organized more intuitively.

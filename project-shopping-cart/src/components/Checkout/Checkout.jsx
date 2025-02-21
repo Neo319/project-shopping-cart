@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import styles from "./Checkout.module.css";
 import { Link } from "react-router-dom";
 
 export default function Checkout({ cart, products, deleteCartItem }) {
@@ -8,12 +7,12 @@ export default function Checkout({ cart, products, deleteCartItem }) {
     const imgSrc = products[item - 1].image;
     const price = products[item - 1].price;
     return (
-      <li className={styles.cartItem}>
-        <div className={styles.info}>
+      <li className="cartItem">
+        <div className="info">
           <h2>{title}</h2>
           <div>
             <span>Quantity: {cart[item]}</span>
-            <span className={styles.price}>${price}</span>
+            <span className="price">${price}</span>
           </div>
           <button onClick={() => deleteCartItem(item)}>Remove Item</button>
         </div>
@@ -44,7 +43,7 @@ export default function Checkout({ cart, products, deleteCartItem }) {
   console.log("func result: " + subtotalPrice());
 
   return (
-    <div className={styles.checkoutPage}>
+    <div className="checkoutPage">
       <h1>Hello from Checkout page!!</h1>
       <h1>Your Cart: </h1>
 
@@ -60,17 +59,17 @@ export default function Checkout({ cart, products, deleteCartItem }) {
               );
             })}
           </ul>
-          <div className={styles.subtotal}>
+          <div className="subtotal">
             <span>
               ........ Subtotal <br />
             </span>
-            <span className={styles.subtotalNumber}>
+            <span className="subtotalNumber">
               <b>{subtotalPrice()}</b>
             </span>
           </div>
         </div>
       ) : (
-        <div className={styles.emptyCart}>
+        <div className="emptyCart">
           <img
             width="64"
             height="64"

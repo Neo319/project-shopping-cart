@@ -10,11 +10,6 @@ import Shop from "./components/Shop/Shop";
 import Checkout from "./components/Checkout/Checkout";
 
 function App() {
-  const [cart, setCart] = useState({});
-
-  //mock data from fakeStoreAPI
-  //----------------------------------------
-  //TODO: replace with real API fetch
   const mockProducts = [
     {
       id: 1,
@@ -39,16 +34,22 @@ function App() {
     },
   ];
 
-  //fetching API data
-
+  const [cart, setCart] = useState({});
   const [products, setProducts] = useState(null);
 
+  // fetches API and sets product state
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((json) => setProducts(json));
+  // }, []);
+
+  //DEVELOPMENT: sets products to mock
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setProducts(json));
+    setProducts(mockProducts);
   }, []);
 
+  // State Handlers invoked when user adds & decreases cart item.
   const handleCartIncrease = (itemId) => {
     if (cart[itemId] >= 1) {
       const newCart = { ...cart, [itemId]: cart[itemId] + 1 };
@@ -58,7 +59,6 @@ function App() {
       setCart(newCart);
     }
   };
-
   const handleCartDecrease = (itemId) => {
     if (cart[itemId] > 1) {
       const newCart = { ...cart, [itemId]: cart[itemId] - 1 };
@@ -67,7 +67,7 @@ function App() {
       deleteCartItem(itemId);
     }
   };
-
+  // function ensuring cart items with <1 quantity are removed.
   const deleteCartItem = (itemId) => {
     const newCart = { ...cart };
     delete newCart[itemId];
