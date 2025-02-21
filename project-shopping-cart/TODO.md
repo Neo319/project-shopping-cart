@@ -33,3 +33,11 @@
 - products could be organized more intuitively.
 - some form of nav component should stay on screen.
 - Whole title should be dipslayed. (at least more of it)
+
+# Planned branches ------------------------------------
+
+1. bugfixes
+2. feat: categories
+3. feat: product detail
+4. feat: featured page
+5. feat: animations
