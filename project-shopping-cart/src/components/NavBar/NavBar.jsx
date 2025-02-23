@@ -26,17 +26,31 @@ const NavBar = ({ cart }) => {
 
   return (
     <nav aria-label="navigation" className="navBar">
-      <h1>
-        <Link to="/">Project TOP Shop</Link>
-      </h1>
       <ul>
         <li>
-          <Link to="/Shop">Shop</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/checkout" data-testid="checkout-link">
+          <Link to="/cart">My Cart</Link>
+        </li>
+        <li>
+          <Link to="/rand">View random product</Link>
+        </li>
+        <li>
+          <Link to="/category">Categories</Link>
+        </li>
+        <li>
+          <Link to="/catalogue">Catalogue</Link>
+        </li>
+        <li>
+          <Link to="/cart">My Cart</Link>
+        </li>
+
+        {/* button / cart icon */}
+        <li>
+          <Link to="/checkout">
             <button className="checkoutBtn">
-              <img className="cart" src={cartIconSrc} alt="Checkout" />
+              <img className="cart" src={cartIconSrc} />
               <div data-testid="cart-count" className="cartCount">
                 {calculateCartItems()}
               </div>
