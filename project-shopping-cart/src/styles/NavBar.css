@@ -12,6 +12,8 @@
   justify-content: space-around;
 
   background-color: #252525;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: light) {
