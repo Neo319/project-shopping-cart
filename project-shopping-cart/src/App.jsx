@@ -1,7 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 
-import "./App.css";
+import "./styles/NavBar.css";
+import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar/NavBar";
@@ -74,6 +74,7 @@ function App() {
     setCart(newCart);
   };
 
+  // App component functions as a Router, allows state management within other components.
   return (
     <Router>
       <NavBar cart={cart} />
