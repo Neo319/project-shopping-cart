@@ -110,7 +110,9 @@ function App() {
               {/* testing ground for new functions, components, etc. Current: carousel. */}
               <NavBar cart={cart} />
               <h1>testing ground for Carousel.</h1>
-              <Carousel></Carousel>
+
+              {/* test: pass mock product images into component */}
+              <Carousel products={mockProducts} />
             </>
           }
         />
