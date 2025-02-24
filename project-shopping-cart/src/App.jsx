@@ -5,6 +5,8 @@ import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar/NavBar";
+import Carousel from "./components/carousel/Carousel";
+
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Checkout from "./components/Checkout/Checkout";
@@ -90,7 +92,7 @@ function App() {
               handleCartDecrease={handleCartDecrease}
             />
           }
-        ></Route>
+        />
         <Route
           path={"/checkout"}
           element={
@@ -108,9 +110,10 @@ function App() {
               {/* testing ground for new functions, components, etc. Current: carousel. */}
               <NavBar cart={cart} />
               <h1>testing ground for Carousel.</h1>
+              <Carousel></Carousel>
             </>
           }
-        ></Route>
+        />
       </Routes>
     </Router>
   );
