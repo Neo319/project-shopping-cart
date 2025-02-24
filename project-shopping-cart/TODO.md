@@ -38,8 +38,15 @@
 
 # Planned branches ------------------------------------
 
-1. bugfixes
 2. feat: categories
 3. feat: product detail
 4. feat: featured page
 5. feat: animations
+
+# Current/next:
+
+categories
+use
+fetch('https://fakestoreapi.com/products/categories')
+.then(res=>res.json())
+.then(json=>console.log(json))

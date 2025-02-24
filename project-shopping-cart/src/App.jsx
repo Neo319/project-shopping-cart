@@ -101,6 +101,16 @@ function App() {
             />
           }
         />
+        <Route
+          path={"/test"}
+          element={
+            <>
+              {/* testing ground for new functions, components, etc. Current: carousel. */}
+              <NavBar cart={cart} />
+              <h1>testing ground for Carousel.</h1>
+            </>
+          }
+        ></Route>
       </Routes>
     </Router>
   );

@@ -45,6 +45,9 @@ const NavBar = ({ cart }) => {
         <li>
           <Link to="/cart">My Cart</Link>
         </li>
+        <li>
+          <Link to="/test">Testing Ground</Link>
+        </li>
 
         {/* button / cart icon */}
         <li>
