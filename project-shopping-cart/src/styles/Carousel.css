@@ -1,0 +1,19 @@
+/* styles for scrolling carousel component in homepage. */
+.carousel {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel > div {
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+.carousel > div > img {
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+}

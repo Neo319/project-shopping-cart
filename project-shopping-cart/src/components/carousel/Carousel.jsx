@@ -1,23 +1,25 @@
 import PropTypes from "prop-types";
+import "../../styles/Carousel.css";
 
 function Carousel({ products }) {
   console.log("products:", products);
 
   return (
     <>
-      <span>content:</span>
-      {products.map((product) => {
-        return (
-          <div key={"carouselKey" + product.id}>
-            <img
-              src={product.image}
-              alt="error finding product image"
-              width="200px"
-            />
-            <h1>{product.title}</h1>
-          </div>
-        );
-      })}
+      <div className="carousel">
+        {products.map((product) => {
+          return (
+            <div key={"carouselKey" + product.id}>
+              <img
+                src={product.image}
+                alt="error finding product image"
+                width="200px"
+              />
+              <h2>{product.title}</h2>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
