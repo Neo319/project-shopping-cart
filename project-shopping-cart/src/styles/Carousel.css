@@ -3,7 +3,7 @@
   border: 1px solid red;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
 
   padding: 10px;

@@ -9,7 +9,19 @@ function Carousel({ products }) {
     if (index >= products.length - 1) {
       setIndex(0);
     } else setIndex(index + 1);
-  }, 2000);
+  }, 7000);
+
+  function carouselPosition() {
+    let output = "";
+    for (let i = 0; i <= products.length - 1; i++) {
+      if (index === i) {
+        output += " * ";
+      } else {
+        output += " - ";
+      }
+    }
+    return output;
+  }
 
   return (
     <>
@@ -23,6 +35,7 @@ function Carousel({ products }) {
           />
           <h2>{products[index].title}</h2>
         </div>
+        <span>{carouselPosition()}</span>
       </div>
     </>
   );
@@ -33,18 +46,3 @@ Carousel.propTypes = {
 };
 
 export default Carousel;
-
-{
-  /* {products.map((product) => {
-          return (
-            <div key={"carouselKey" + product.id}>
-              <img
-                src={product.image}
-                alt="error finding product image"
-                width="200px"
-              />
-              <h2>{product.title}</h2>
-            </div>
-          );
-        })} */
-}
