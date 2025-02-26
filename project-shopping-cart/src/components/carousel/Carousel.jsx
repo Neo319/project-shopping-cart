@@ -1,15 +1,19 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../styles/Carousel.css";
 
 function Carousel({ products }) {
   const [index, setIndex] = useState(0);
 
-  setInterval(() => {
-    if (index >= products.length - 1) {
-      setIndex(0);
-    } else setIndex(index + 1);
-  }, 7000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) =>
+        prevIndex >= products.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [products.length]);
 
   function carouselPosition() {
     let output = "";
