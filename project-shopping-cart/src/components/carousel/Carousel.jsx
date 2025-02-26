@@ -10,7 +10,7 @@ function Carousel({ products }) {
       setIndex((prevIndex) =>
         prevIndex >= products.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [products.length]);
@@ -31,7 +31,7 @@ function Carousel({ products }) {
     <>
       <div className="carousel">
         {/* render the product from index */}
-        <div>
+        <div key={index}>
           <img
             src={products[index].image}
             alt="error finding product image"

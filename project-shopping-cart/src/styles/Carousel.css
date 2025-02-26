@@ -15,10 +15,23 @@
   background-color: #e0e0e0;
 
   padding: 2em;
+
+  animation: ease-out 1s slideInFromLeft;
 }
 
 .carousel > div > img {
   border-radius: 10px;
   background-color: white;
   padding: 15px;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
