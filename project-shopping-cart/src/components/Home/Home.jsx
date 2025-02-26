@@ -1,6 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
+import Carousel from "../carousel/Carousel";
 
-export default function Home() {
+export default function Home(products) {
   return (
     <div className="home">
       <div className="images">
@@ -23,10 +23,15 @@ export default function Home() {
 
       <h1>TOP Shop </h1>
       <span>by Alex N.</span>
+
+      <div>
+        <h1>Featured Products</h1>
+        {Carousel(products)}
+      </div>
       <p>
         This mock shop project was made during{" "}
         <a href="https://www.theodinproject.com">
-          The Odin Project's React Course.
+          The Odin Project&apos;s React Course.
         </a>
         Try using the nav bar at the top of your screen to navigate to The Shop
         page, fill your cart with some items, and then navigate to checkout by

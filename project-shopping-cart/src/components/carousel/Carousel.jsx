@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import "../../styles/Carousel.css";
 
 function Carousel({ products }) {
+  // safeguard:
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -15,6 +17,9 @@ function Carousel({ products }) {
     return () => clearInterval(interval);
   }, [products.length]);
 
+  if (!products || products.length == 0) {
+    return <>loading...</>;
+  }
   function carouselPosition() {
     let output = "";
     for (let i = 0; i <= products.length - 1; i++) {
