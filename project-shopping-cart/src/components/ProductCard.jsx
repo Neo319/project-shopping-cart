@@ -1,6 +1,6 @@
 // component to display details of product and provide link
 import PropTypes from "prop-types";
-import "../../styles/ProductCard.css";
+import "../styles/ProductCard.css";
 
 function ProductCard({ product }) {
   console.log("product=", product);

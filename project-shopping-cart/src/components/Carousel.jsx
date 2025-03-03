@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import "../../styles/Carousel.css";
+import "../styles/Carousel.css";
 
 function Carousel({ products }) {
   const [index, setIndex] = useState(0);

@@ -4,12 +4,12 @@ import "./styles/NavBar.css";
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar";
 
-import Home from "./components/Home/Home";
-import Shop from "./components/Shop/Shop";
-import Checkout from "./components/Checkout/Checkout";
-import ProductCard from "./components/productCard/ProductCard";
+import Home from "./components/Home";
+import Shop from "./components/Shop";
+import Checkout from "./components/Checkout";
+import ProductCard from "./components/ProductCard";
 
 const mockProducts = [
   {

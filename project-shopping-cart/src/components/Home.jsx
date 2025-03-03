@@ -1,4 +1,4 @@
-import Carousel from "../carousel/Carousel";
+import Carousel from "./Carousel";
 
 export default function Home(products) {
   return (
