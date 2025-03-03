@@ -7,22 +7,34 @@
   gap: 20px;
 
   padding: 10px;
-  background-color: #eeeeee;
+  background-color: #454545;
 }
 
 .carousel > div {
   border-radius: 10px;
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
+  background-color: #707070;
 
   padding: 2em;
 
   animation: ease-out 1s slideInFromLeft;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel > div > img {
   border-radius: 10px;
   background-color: white;
   padding: 15px;
+
+  width: 200px;
+  height: fit-content;
+}
+
+.carousel section {
+  border: 1px solid red;
 }
 
 @keyframes slideInFromLeft {
@@ -33,5 +45,22 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* light mode */
+@media (prefers-color-scheme: light) {
+  .carousel {
+    background-color: #eeeeee;
+  }
+  .carousel > div {
+    background-color: #e0e0e0;
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 800px) {
+  .carousel > div {
+    flex-direction: row;
   }
 }

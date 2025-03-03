@@ -41,7 +41,7 @@
   color: #888;
 }
 
-/* custom styles */
-
-/* home/landing page. */
-/* classes:  */
+/* make space for navbar across site */
+body {
+  margin-top: 40px;
+}

@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import "../../styles/Carousel.css";
 
 function Carousel({ products }) {
-  // safeguard:
-
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -42,7 +40,13 @@ function Carousel({ products }) {
             alt="error finding product image"
             width="200px"
           />
-          <h2>{products[index].title}</h2>
+          <section>
+            <h2>{products[index].title}</h2>
+            <p>
+              {products[index].description.slice(0, 200) + "..."}
+              <a href="">(see more)</a>
+            </p>
+          </section>
         </div>
         <span>{carouselPosition()}</span>
       </div>
