@@ -1,5 +1,6 @@
 // component to display details of product and provide link
 import PropTypes from "prop-types";
+import "../../styles/ProductCard.css";
 
 function ProductCard({ product }) {
   console.log("product=", product);
@@ -8,20 +9,22 @@ function ProductCard({ product }) {
 
   return (
     <>
-      <div className={"card " + product.id}>
-        <a href={"/product/" + product.id}>
-          <img
-            src={product.image}
-            alt="error finding product image"
-            width="100px"
-          />
-          <section>
+      <a href={"/product/" + product.id}>
+        <div className={"card " + product.id}>
+          <div className="container">
+            <img
+              src={product.image}
+              alt="error finding product image"
+              width="100px"
+            />
+          </div>
+
+          <div className="info">
             <h1>{product.title}</h1>
-            <p>{product.description.slice(0, 100) + "..."}</p>
-            <span>Category: {product.category}</span>
-          </section>
-        </a>
-      </div>
+            <h1 className="price">${product.price}</h1>
+          </div>
+        </div>
+      </a>
     </>
   );
 }
