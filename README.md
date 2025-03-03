@@ -1,5 +1,7 @@
 # Personal Portfolio Project- Shopping Cart
 
+## NOTE: Project is currently Work in Progress.
+
 ## Table of Contents
 
 - [Description](#description)
