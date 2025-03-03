@@ -10,6 +10,7 @@ import Carousel from "./components/carousel/Carousel";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Checkout from "./components/Checkout/Checkout";
+import ProductCard from "./components/productCard/ProductCard";
 
 const mockProducts = [
   {
@@ -119,10 +120,10 @@ function App() {
             <>
               {/* testing ground for new functions, components, etc. Current: carousel. */}
               <NavBar cart={cart} />
-              <h1>testing ground for Carousel.</h1>
+              <h1>testing ground for Product Cards.</h1>
 
               {/* test: pass mock product images into component */}
-              <Carousel products={mockProducts} />
+              <ProductCard product={mockProducts[1]} />
             </>
           }
         />
