@@ -5,7 +5,6 @@ import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar/NavBar";
-import Carousel from "./components/carousel/Carousel";
 
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
