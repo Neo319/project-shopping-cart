@@ -12,15 +12,11 @@ function ProductCard({ product }) {
       <a href={"/product/" + product.id}>
         <div className={"card " + product.id}>
           <div className="container">
-            <img
-              src={product.image}
-              alt="error finding product image"
-              width="100px"
-            />
+            <img src={product.image} alt="error finding product image" />
           </div>
 
           <div className="info">
-            <h1>{product.title}</h1>
+            <h1>{product.title.slice(0, 60) + "..."}</h1>
             <h1 className="price">${product.price}</h1>
           </div>
         </div>
