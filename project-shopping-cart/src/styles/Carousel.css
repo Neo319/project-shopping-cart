@@ -1,7 +1,5 @@
 /* styles for scrolling carousel component in homepage. */
 .carousel {
-  border: 1px solid red;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -32,11 +30,6 @@
   width: 200px;
   height: fit-content;
 }
-
-.carousel section {
-  border: 1px solid red;
-}
-
 @keyframes slideInFromLeft {
   from {
     opacity: 0;

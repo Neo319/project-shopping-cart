@@ -1,0 +1,32 @@
+/* home section styles */
+
+section.homeProductGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.homeProductGrid > div {
+  background-color: #454545;
+  width: min-content;
+}
+
+.home section {
+  border-radius: 10px;
+  margin: 8px;
+  margin-top: 15px;
+}
+
+.sectionHead {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+
+  text-align: left;
+}
+
+@media (prefers-color-scheme: light) {
+  section.homeProductGrid > div {
+    background-color: #eeeeee;
+  }
+}

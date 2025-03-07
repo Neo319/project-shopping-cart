@@ -1,4 +1,7 @@
 import Carousel from "./Carousel";
+import ProductGrid from "./ProductGrid";
+
+import "../styles/Home.css";
 
 export default function Home(products) {
   return (
@@ -25,11 +28,20 @@ export default function Home(products) {
         <h1>TOP Shop </h1>
         <span>by Alex N.</span>
 
-        <div>
-          <h1>Featured Products</h1>
+        <section>
+          <h1 className="sectionHead">Featured Products</h1>
           {Carousel(products)}
           {/* TODO: decide on 'featured' products and pass them here. */}
-        </div>
+        </section>
+
+        <section className="homeProductGrid">
+          <div>
+            <h1 className="sectionHead">Products from (random section)</h1>
+            {/* TODO: get a random product and retrieve more products from its category. */}
+            {ProductGrid(products)}
+          </div>
+        </section>
+
         <p>
           This mock shop project was made during{" "}
           <a href="https://www.theodinproject.com">

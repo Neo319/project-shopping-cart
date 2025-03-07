@@ -12,7 +12,6 @@ function ProductGrid({ products }) {
 
   return (
     <div className="ProductGrid">
-      <span>grid header here.</span>
       {products.map((product) => {
         return <ProductCard key={"card" + product.id} product={product} />;
       })}
