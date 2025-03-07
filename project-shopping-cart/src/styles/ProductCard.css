@@ -30,3 +30,13 @@ div.card > div.container {
   background-color: white;
   max-height: 60%;
 }
+
+@media (prefers-color-scheme: light) {
+  div.card {
+    background-color: #e0e0e0;
+  }
+
+  div.card h1 {
+    color: black;
+  }
+}
