@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-
 import { Link } from "react-router-dom";
 
 const NavBar = ({ cart }) => {
@@ -27,27 +26,44 @@ const NavBar = ({ cart }) => {
   return (
     <nav aria-label="navigation" className="navBar">
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/cart">My Cart</Link>
-        </li>
-        <li>
-          <Link to="/rand">View random product</Link>
-        </li>
-        <li>
-          <Link to="/category">Categories</Link>
-        </li>
-        <li>
-          <Link to="/catalogue">Catalogue</Link>
-        </li>
-        <li>
-          <Link to="/cart">My Cart</Link>
-        </li>
-        <li>
-          <Link to="/test">Testing Ground</Link>
-        </li>
+        {
+          // alter screen based on device width
+          window.screen.width < 800 ? (
+            <>
+              <button className="hamburgerBtn">
+                <div className="hamburgerContainer">
+                  <div className="hamburger"></div>
+                  <div className="hamburger"></div>
+                  <div className="hamburger"></div>
+                </div>
+              </button>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/cart">My Cart</Link>
+              </li>
+              <li>
+                <Link to="/rand">View random product</Link>
+              </li>
+              <li>
+                <Link to="/category">Categories</Link>
+              </li>
+              <li>
+                <Link to="/catalogue">Catalogue</Link>
+              </li>
+              <li>
+                <Link to="/cart">My Cart</Link>
+              </li>
+              <li>
+                <Link to="/test">Testing Ground</Link>
+              </li>
+            </>
+          )
+        }
 
         {/* button / cart icon */}
         <li>

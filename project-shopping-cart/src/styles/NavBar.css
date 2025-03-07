@@ -11,10 +11,11 @@
 
   display: flex;
   justify-content: flex-end;
-
   background-color: #252525;
 
   z-index: 2;
+
+  border-bottom: solid 3px #ddaf50;
 }
 
 .navBar ul {
@@ -35,6 +36,28 @@
 
 .navBar img {
   height: 20px;
+}
+
+/* mobile view hamburger menu button icon */
+.navBar button.hamburgerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar div.hamburgerContainer {
+  width: 18px;
+  height: 18px;
+
+  /* correcting for vertical offset */
+  transform: translateY(-5%);
+
+  display: grid;
+  gap: 3px;
+}
+.navBar div.hamburger {
+  background-color: #ddaf50;
+  border-radius: 2px;
 }
 
 @media (prefers-color-scheme: light) {
