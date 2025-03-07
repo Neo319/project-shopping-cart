@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Checkout from "./components/Checkout";
-import ProductCard from "./components/ProductCard";
+import ProductGrid from "./components/ProductGrid";
 
 const mockProducts = [
   {
@@ -122,7 +122,7 @@ function App() {
               <h1>testing ground for Product Cards.</h1>
 
               {/* test: pass mock product images into component */}
-              <ProductCard product={mockProducts[1]} />
+              <ProductGrid products={products} />
             </>
           }
         />

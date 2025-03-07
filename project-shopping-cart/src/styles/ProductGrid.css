@@ -1,0 +1,17 @@
+div.ProductGrid {
+  border: 1px solid #eeee;
+  display: grid;
+
+  width: 100vw;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* TODO- duplicate styling similar to amazon using grid?  */
+
+@media screen and (min-width: 800px) {
+  div.ProductGrid {
+    width: 600px;
+  }
+}

@@ -12,7 +12,11 @@ function ProductCard({ product }) {
       <a href={"/product/" + product.id}>
         <div className={"card " + product.id}>
           <div className="container">
-            <img src={product.image} alt="error finding product image" />
+            <img
+              src={product.image}
+              alt="error finding product image"
+              width="200px"
+            />
           </div>
 
           <div className="info">
