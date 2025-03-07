@@ -7,7 +7,6 @@ import "../styles/ProductGrid.css";
 import ProductCard from "./ProductCard";
 
 function ProductGrid({ products }) {
-  console.log("products:", products);
   if (!products || !products.length) return <>Loading...</>;
 
   return (

@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import "../styles/ProductCard.css";
 
 function ProductCard({ product }) {
-  console.log("product=", product);
-
   if (!product) return <>loading...</>;
 
   return (
