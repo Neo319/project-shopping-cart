@@ -1,5 +1,5 @@
-import Carousel from "./Carousel";
-import ProductGrid from "./ProductGrid";
+import Carousel from "../components/Carousel";
+import ProductGrid from "../components/ProductGrid";
 
 import "../styles/Home.css";
 

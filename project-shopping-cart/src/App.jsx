@@ -6,9 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Checkout from "./components/Checkout";
+import Home from "./views/Home";
+import Shop from "./views/Shop";
+import Checkout from "./views/Checkout";
+import ProductDetail from "./views/ProductDetail";
+
 import ProductGrid from "./components/ProductGrid";
 
 const mockProducts = [
@@ -103,8 +105,11 @@ function App() {
             />
           }
         />
+
+        <Route path="/product/:id" element={<ProductDetail />} />
+
         <Route
-          path={"/checkout"}
+          path="/checkout"
           element={
             <Checkout
               cart={cart}
@@ -114,7 +119,7 @@ function App() {
           }
         />
         <Route
-          path={"/test"}
+          path="/test"
           element={
             <>
               {/* testing ground for new functions, components, etc. Current: carousel. */}
