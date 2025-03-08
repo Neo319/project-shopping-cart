@@ -59,12 +59,17 @@ const NavBar = ({ cart }) => {
     setMenuOpen(!menuOpen);
   };
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+  window.addEventListener("resize", () => {
+    setIsMobile(window.innerWidth <= 800);
+  });
+
   return (
     <nav aria-label="navigation" className="navBar">
       <ul>
         {
           // alter screen based on device width
-          window.screen.width < 800 ? (
+          isMobile ? (
             <>
               <button className="hamburgerBtn" onClick={toggleMenuOpen}>
                 <div className="hamburgerContainer">
@@ -74,11 +79,7 @@ const NavBar = ({ cart }) => {
                 </div>
               </button>
 
-              {menuOpen ? (
-                <div onClick={toggleMenuOpen}>{dropDown(navLinks)}</div>
-              ) : (
-                <></>
-              )}
+              {menuOpen ? <>{dropDown(navLinks)}</> : <></>}
             </>
           ) : (
             navLinks()

@@ -12,7 +12,7 @@
   justify-content: flex-end;
   background-color: #252525;
 
-  z-index: 2;
+  z-index: 10;
 
   border-bottom: solid 3px #ddaf50;
 }
@@ -73,6 +73,14 @@ ul.dropDownList {
 
   padding-left: 10px;
   padding-right: 10px;
+
+  z-index: 5;
+
+  animation: menuDrop 0.3s ease-out;
+}
+
+div.dropDownContainer {
+  display: relative;
 }
 
 @media (prefers-color-scheme: light) {
@@ -82,5 +90,19 @@ ul.dropDownList {
   .navBar img {
     /* make the cart appear black */
     filter: none;
+  }
+
+  ul.dropDownList {
+    background-color: #d0d0d0;
+  }
+}
+
+/* animate menu drop */
+@keyframes menuDrop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
