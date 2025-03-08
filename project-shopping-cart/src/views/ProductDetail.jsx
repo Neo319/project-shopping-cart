@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import "../styles/ProductDetail.css";
+
 function ProductDetail() {
   const { id } = useParams();
 
@@ -20,26 +22,27 @@ function ProductDetail() {
 
   return product !== null ? (
     <>
-      <body>
-        <span>{JSON.stringify(product)}</span>
+      <div className="productDetail">
+        <div>
+          <img src={product.image} width="200px" />
+          <h1>{product.title}</h1>
+          <span className="price"> ${product.price}</span>
+        </div>
 
-        <img src={product.image} width="200px" />
-        <h1>{product.title}</h1>
-        <span>{product.price}</span>
-
-        <p>{product.description}</p>
-        <p>Category: {product.category}</p>
-
-        <ul>
-          <li> Customer rating: {product.rating.rate}</li>
-          <li>({product.rating.count} reviews) </li>
-        </ul>
-      </body>
+        <div>
+          <p>{product.description}</p>
+          <p>Category: {product.category}</p>
+          <ul>
+            <li> Customer rating: {product.rating.rate}</li>
+            <li>({product.rating.count} reviews) </li>
+          </ul>
+        </div>
+      </div>
     </>
   ) : (
-    <body>
+    <div>
       <>loading...</>
-    </body>
+    </div>
   );
 }
 ProductDetail.propTypes = {
