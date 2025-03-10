@@ -11,9 +11,11 @@ function ProductCard({ product }) {
     case "men's clothing":
       categoryClassName = "mens";
       break;
-
+    case "women's clothing":
+      categoryClassName = "womens";
+      break;
     default:
-      categoryClassName = "other";
+      categoryClassName = product.category;
       break;
   }
 
