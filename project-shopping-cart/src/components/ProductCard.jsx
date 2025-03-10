@@ -5,6 +5,18 @@ import "../styles/ProductCard.css";
 function ProductCard({ product }) {
   if (!product) return <>loading...</>;
 
+  let categoryClassName;
+  // categories
+  switch (product.category) {
+    case "men's clothing":
+      categoryClassName = "mens";
+      break;
+
+    default:
+      categoryClassName = "other";
+      break;
+  }
+
   return (
     <>
       <a href={"/product/" + product.id}>
@@ -18,8 +30,16 @@ function ProductCard({ product }) {
           </div>
 
           <div className="info">
-            <h1>{product.title.slice(0, 60) + "..."}</h1>
+            <h1>{product.title.slice(0, 30) + "..."}</h1>
             <h1 className="price">${product.price}</h1>
+
+            <div className={categoryClassName}>
+              <span>
+                {" • "}
+                {product.category.charAt(0).toUpperCase() +
+                  product.category.slice(1)}
+              </span>
+            </div>
           </div>
         </div>
       </a>

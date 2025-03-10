@@ -45,3 +45,17 @@
 body {
   margin-top: 40px;
 }
+
+/* category color scheme */
+.mens {
+  color: #49e4da;
+}
+.womens {
+  color: #e44960;
+}
+.jewelry {
+  color: #e1e449;
+}
+.electronics {
+  color: #49e45b;
+}

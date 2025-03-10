@@ -31,6 +31,11 @@ div.card > div.container {
   max-height: 60%;
 }
 
+div.card > div.info {
+  border: 2px solid red;
+  display: grid;
+}
+
 @media (prefers-color-scheme: light) {
   div.card {
     background-color: #e0e0e0;
