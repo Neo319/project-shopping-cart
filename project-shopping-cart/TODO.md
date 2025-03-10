@@ -45,8 +45,12 @@
 
 # Current/next:
 
-categories
-use
-fetch('https://fakestoreapi.com/products/categories')
-.then(res=>res.json())
-.then(json=>console.log(json))
+- polish product detail page
+
+homepage:
+
+- make featured products random
+- extract products from one section for
+
+functionality:
+-re-implement adding to cart from homepage, product detail page.

@@ -59,3 +59,18 @@ body {
 .electronics {
   color: #49e45b;
 }
+
+@media (prefers-color-scheme: light) {
+  .mens {
+    color: #2b8680;
+  }
+  .womens {
+    color: #963f4c;
+  }
+  .jewelery {
+    color: #5d5e1d;
+  }
+  .electronics {
+    color: #2d7e35;
+  }
+}
