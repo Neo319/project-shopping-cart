@@ -5,12 +5,7 @@ import PropTypes from "prop-types";
 
 import "../styles/ProductDetail.css";
 
-function ProductDetail({
-  cart,
-  products,
-  handleCartIncrease,
-  handleCartDecrease,
-}) {
+function ProductDetail({ handleCartIncrease, handleCartDecrease }) {
   const { id } = useParams();
 
   const URL = "https://fakestoreapi.com/products";

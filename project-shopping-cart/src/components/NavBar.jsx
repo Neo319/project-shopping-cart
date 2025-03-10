@@ -14,7 +14,7 @@ const NavBar = ({ cart }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cart">My Cart</Link>
+          <Link to="/checkout">My Cart</Link>
         </li>
         <li>
           <Link to="/rand">View random product</Link>

@@ -16,7 +16,7 @@ export default function Checkout({ cart, products, deleteCartItem }) {
           </div>
           <button onClick={() => deleteCartItem(item)}>Remove Item</button>
         </div>
-        <img src={imgSrc} alt="" />
+        <img src={imgSrc} width="200px" />
       </li>
     );
   }

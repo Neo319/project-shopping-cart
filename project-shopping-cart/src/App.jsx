@@ -86,7 +86,6 @@ function App() {
           path="/product/:id"
           element={
             <ProductDetail
-              cart={cart}
               handleCartIncrease={handleCartIncrease}
               handleCartDecrease={handleCartDecrease}
             />
