@@ -82,7 +82,16 @@ function App() {
           }
         />
 
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route
+          path="/product/:id"
+          element={
+            <ProductDetail
+              cart={cart}
+              handleCartIncrease={handleCartIncrease}
+              handleCartDecrease={handleCartDecrease}
+            />
+          }
+        />
 
         <Route
           path="/checkout"

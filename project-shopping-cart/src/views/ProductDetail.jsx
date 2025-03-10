@@ -5,7 +5,12 @@ import PropTypes from "prop-types";
 
 import "../styles/ProductDetail.css";
 
-function ProductDetail() {
+function ProductDetail({
+  cart,
+  products,
+  handleCartIncrease,
+  handleCartDecrease,
+}) {
   const { id } = useParams();
 
   const URL = "https://fakestoreapi.com/products";
@@ -27,6 +32,16 @@ function ProductDetail() {
           <img src={product.image} width="200px" />
           <h1>{product.title}</h1>
           <span className="price"> ${product.price}</span>
+        </div>
+
+        <div>
+          <button
+            onClick={() => {
+              handleCartIncrease(product.id);
+            }}
+          >
+            Add to Cart
+          </button>
         </div>
 
         <div>
