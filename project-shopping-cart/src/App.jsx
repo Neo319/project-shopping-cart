@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 
 import "./styles/NavBar.css";
 import "./styles/App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  redirect,
+} from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 
@@ -10,8 +15,6 @@ import Home from "./views/Home";
 import Shop from "./views/Shop";
 import Checkout from "./views/Checkout";
 import ProductDetail from "./views/ProductDetail";
-
-import ProductGrid from "./components/ProductGrid";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -102,19 +105,10 @@ function App() {
             />
           }
         />
-        <Route
-          path="/test"
-          element={
-            <>
-              {/* testing ground for new functions, components, etc. Current: carousel. */}
-              <NavBar cart={cart} />
-              <h1>testing ground for Product Cards.</h1>
 
-              {/* test: pass mock product images into component */}
-              <ProductGrid products={products} />
-            </>
-          }
-        />
+        <Route path="/rand" element={<>WIP: redirect</>} />
+        <Route path="/category" element={<>WIP: categories</>} />
+        <Route path="/catalogue" element={<>WIP: catalogue</>} />
       </Routes>
     </Router>
   );
